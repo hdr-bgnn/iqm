@@ -15,7 +15,7 @@ from HGNN.train import CNN, dataLoader
 from HGNN.train.configParser import ConfigParser, getModelName, getDatasetName
 config_plots.global_settings()
 
-experimetnsFileName = "experiments.csv"
+experimentsFileName = "experiments.csv"
 
     
 def main(cuda, experimentsPath, dataPath, experimentName):
@@ -31,7 +31,7 @@ def main(cuda, experimentsPath, dataPath, experimentName):
     config_parser = ConfigParser(experimentsPath, dataPath, experimentName)
 
     # init experiments file
-    experimentsFileNameAndPath = os.path.join(experimentsPath, experimetnsFileName)
+    experimentsFileNameAndPath = os.path.join(experimentsPath, experimentsFileName)
     if os.path.exists(experimentsFileNameAndPath):
         experiments_df = pd.read_csv(experimentsFileNameAndPath)
     else:

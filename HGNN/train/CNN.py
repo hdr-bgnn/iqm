@@ -25,7 +25,7 @@ import time
 modelFinalCheckpoint = 'finalModel.pt'
 
 statsFileName = "stats.csv"
-timeFileName = "time.csv"
+timeFileName = "experimentsFileName"
 epochsFileName = "epochs.csv"
 
 paramsFileName="params.json"
