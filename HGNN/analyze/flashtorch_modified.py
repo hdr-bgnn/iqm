@@ -18,7 +18,7 @@ class CNN_wrapper(torch.nn.Module):
         super(CNN_wrapper, self).__init__()
         self.model = model
         self.dataset= dataset
-        self.useHierarchy = params["useHeirarchy"]
+        self.useHierarchy = params["useHierarchy"]
         self.setOutputsOfInterest(defaultOutputs)
     
     def setOutputsOfInterest(self, outputs):
@@ -269,7 +269,7 @@ class SaliencyMap:
             activatins_rows = 1
             A = PlotNetwork.plot_activations(self.model.model, layerName, img.cuda(), self.experimentName, self.experiment_params, title, activatins_rows)
         else:
-            activation = PlotNetwork.model_activations(self.model.model, layerName, self.experiment_params["useHeirarchy"])
+            activation = PlotNetwork.model_activations(self.model.model, layerName, self.experiment_params["useHierarchy"])
             A = activation(img.cuda())
         return A
 

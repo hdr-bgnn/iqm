@@ -30,7 +30,20 @@ Organization:
 │       ├── resnet_cifar.py                                        What is this?
 │       └── train.py                                               What is this?
 
-To start:
+Install dependencies:
+Using pip
+```
+virtualenv .
+pip install -r pip_requirements.txt
+```
+or using Conda
+```
+conda create -n hgnn
+conda activate hgnn
+conda install conda_requirements.yaml
+```
+
+Setup paths and parameters:
 
 Alter the `config.default.ini` to create a `config.ini` in the HGNN directory
 ```
