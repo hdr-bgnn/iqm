@@ -1,5 +1,6 @@
 This repo is for Fish classification.
 
+```
 Organization:
 ├── HGNN
 │   ├── analyze
@@ -29,6 +30,7 @@ Organization:
 │       ├── dataLoader.py                                          What is this?
 │       ├── resnet_cifar.py                                        What is this?
 │       └── train.py                                               What is this?
+```
 
 Install dependencies:
 Using pip
@@ -43,6 +45,11 @@ conda activate hgnn
 conda install conda_requirements.yaml
 ```
 
+Install myhelpers:
+```
+pip install git+ssh://git@github.com/elhamod/myhelpers.git
+```
+
 Setup paths and parameters:
 
 Alter the `config.default.ini` to create a `config.ini` in the HGNN directory
@@ -51,6 +58,7 @@ Alter the `config.default.ini` to create a `config.ini` in the HGNN directory
 experimentsPath = /home/elhamod/HGNN/experiments/
 dataPath = /home/elhamod/projects/HGNN/data
 experimentName = BestModel
+fine_csv_fileName = metadata.csv
 
 [dataPrep]
 image_path = INHS_cropped
@@ -77,9 +85,7 @@ timeFileName = time.csv
 epochsFileName = epochs.csv
 paramsFileName = params.json
 
-[train]
-# metadata file provided by dataset.
-fine_csv_fileName = metadata.csv
+
 # cleaned up metadata file that has no duplicates, invalids, etc
 cleaned_fine_csv_fileName = cleaned_metadata.csv
 
