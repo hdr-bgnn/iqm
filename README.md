@@ -32,48 +32,61 @@ Organization:
 
 To start:
 
-Complete the `config.default.ini` to create a `config.ini`
+Alter the `config.default.ini` to create a `config.ini` in the HGNN directory
 ```
-[analyze]
+[general]
 experimentsPath = /home/elhamod/HGNN/experiments/
-dataPath = /data/BGNN_data
-experimentName= BestModelForJeremy
+dataPath = /home/elhamod/projects/HGNN/data
+experimentName = BestModel
 
 [dataPrep]
-User = hg
+image_path = INHS_cropped
+output_directory_name = 52
+cleaned_species_csv_fileName = cleaned_metadata.csv
+species_csv_fileName = metadata.csv
+numberOfImagesPerSpecies = 50
+
+[augmented]
+applyHorizontalFlip = True
+applyHorizontalFlipProbability = 0.1
+applyTranslation = True
+applyTranslationAmount = 0.1
+applyColorPCA = True
+colorPCAperturbationMagnitude = 0.1
+numOfAugmentedVersions = 10
+cuda = 0
+    
+    
+[train]
+modelFinalCheckpoint = finalModel.pt
+statsFileName = stats.csv
+timeFileName = time.csv
+epochsFileName = epochs.csv
+paramsFileName = params.json
 
 [train]
-modelFinalCheckpoint = 'finalModel.pt'
-statsFileName = "stats.csv"
-timeFileName = "time.csv"
-epochsFileName = "epochs.csv"
-paramsFileName="params.json"
-
-
-[csvpreprocessor]
 # metadata file provided by dataset.
-fine_csv_fileName = "metadata.csv"
-# cleaned up metadata file that has no duplicates, invalids...etc
-cleaned_fine_csv_fileName = "cleaned_metadata.csv"
+fine_csv_fileName = metadata.csv
+# cleaned up metadata file that has no duplicates, invalids, etc
+cleaned_fine_csv_fileName = cleaned_metadata.csv
 
 # Saved file names.
-statistic_countPerFine="count_per_fine.csv"
-statistic_countPerFamilyAndGenis="count_per_family_genus.csv"
+statistic_countPerFine = count_per_fine.csv
+statistic_countPerFamilyAndGenis = count_per_family_genus.csv
 
-# metadata table headers.
-fine_csv_fileName_header = "fileName"
-fine_csv_scientificName_header = "scientificName"
-fine_csv_Coarse_header = "Genus"
-fine_csv_Family_header = "Family"
+experimentsFileName = experiments.csv
+
+[metadatatableheaders]
+fine_csv_fileName_header = fileName
+fine_csv_scientificName_header = scientificName
+fine_csv_Coarse_header = Genus
+fine_csv_Family_header = Family
 
 [dataloader]
-testIndexFileName = "testIndex.csv"
-valIndexFileName = "valIndex.csv"
-trainingIndexFileName = "trainingIndex.csv"
-paramsFileName="params.json"
-
-[train]
-experimentsFileName = "experiments.csv"
+testIndexFileName = testIndex.csv
+valIndexFileName = valIndex.csv
+trainingIndexFileName = trainingIndex.csv
+paramsFileName = params.json
 ```
 
 - Have your data with metadata.csv in a directory
