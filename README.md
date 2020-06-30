@@ -56,7 +56,7 @@ colorPCAperturbationMagnitude = 0.1
 numOfAugmentedVersions = 10
 cuda = 0
     
-    
+
 [train]
 modelFinalCheckpoint = finalModel.pt
 statsFileName = stats.csv
