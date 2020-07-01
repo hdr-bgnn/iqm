@@ -41,15 +41,14 @@ class ConfigParser:
     def write(self, base_params, params, experiment_type):
         self.base_params = base_params
         fileName = configJsonFileName if experiment_type != "Random" else configPickleFileName
-        
+        experimentDirectory = os.path.join(self.experimentsPath, self.experimentName)
         fullFileName = os.path.join(self.experimentsPath, self.experimentName, fileName)
-        if os.path.exists(self.experimentName) and os.path.exists(fullFileName):
+        if os.path.exists(fullFileName):
             self.experimentName = self.experimentName+"-"+hex(int(time.time()))   
-        fullFileName = os.path.join(self.experimentName, fileName)
         
-        if not os.path.exists(self.experimentName):
-            os.makedirs(self.experimentName)
-
+        if not os.path.exists(experimentDirectory):
+            os.makedirs(experimentDirectory)
+        #print("experimentsPath:{}\nexperimentName:{}\nfullFileName:{}".format(self.experimentsPath,self.experimentName,fullFileName))
 
         experimentList = []
         if experiment_type=="Grid":
