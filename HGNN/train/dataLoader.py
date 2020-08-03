@@ -124,8 +124,10 @@ class FishDataset(Dataset):
         return img
     
     
-    def __getitem__(self, idx):          
+    def __getitem__(self, idx):
+        #print("someone asked me for idx {}".format(idx))
         img_fine = self.csv_processor.samples[idx]['fine']
+        #print("i am trying img_fine {}".format(img_fine))
         img_fine_index = torch.tensor(self.csv_processor.getFineList().index(img_fine))
         
         # Cache transformed images

@@ -265,8 +265,11 @@ def trainModel(train_loader, validation_loader, params, model, savedModelName, t
             for batch in train_loader:
                 optimizer.zero_grad()
                 with torch.set_grad_enabled(True):
-                    z = applyModel(batch["image"], model)
-                    
+                    #print("trying to apply batch image {}".format(batch['image']))
+                    try:
+                        z = applyModel(batch["image"], model)
+                    except ValueError:
+                        continue
                     if not isOldBlackbox:
                         loss_coarse = 0
                         if z["coarse"] is not None:
