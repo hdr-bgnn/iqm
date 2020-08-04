@@ -1,4 +1,4 @@
-This repo is for Fish classification.
+Source code for "Biodiversity Image Quality Metadata Augments Convolutional Neural Network Classification of Fish Species" submitted to MTSR
 
 ```
 Organization:
