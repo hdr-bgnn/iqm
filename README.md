@@ -1,35 +1,31 @@
-This repo is for Fish classification.
+Source code for "Biodiversity Image Quality Metadata Augments Convolutional Neural Network Classification of Fish Species" submitted to MTSR
 
 ```
 Organization:
 ├── HGNN
 │   ├── analyze
-│   │   ├── analyze_experiment.ipynb                               What is this?
-│   │   ├── analyze_experiments.ipynb                              What is this?
-│   │   ├── analyze_trial.ipynb                                    What is this?
-│   │   ├── calculate_random_accuracy.ipynb                        What is this?
-│   │   ├── correlation_of_features.ipynb                          What is this?
-│   │   ├── flashtorch_modified.py                                 What is this?
-│   │   ├── obtain_misclassified_examples.ipynb                    What is this?
-│   │   └── plot_network.ipynb                                     What is this?
+│   │   ├── analyze_experiments.ipynb                              Confusion matrices
+│   │   ├── analyze_trial.ipynb                                    
+│   │   ├── calculate_random_accuracy.ipynb                        
+│   │   ├── correlation_of_features.ipynb                          
+│   │   ├── flashtorch_modified.py                                 
+│   │   ├── obtain_misclassified_examples.ipynb                    Extract misclassified and look at quality factors
+│   │   └── plot_network.ipynb                                     
 │   ├── dataPrep
-│   │   ├── Segment_images.ipynb                                   What is this?
-│   │   ├── copy_image_subset.ipynb                                What is this?
-│   │   ├── create_cleaned_metadata.ipynb                          What is this?
-│   │   ├── experiment-test-dataloader2-full_INHS.ipynb            What is this?
-│   │   ├── generate_augmented_data.ipynb                          What is this?
-│   │   └── imageDownloadScript.sh                                 What is this?
+│   │   ├── Segment_images.ipynb                                   
+│   │   ├── copy_image_subset.ipynb                                Useful for subsets (called "suffix" for some reason)
+│   │   ├── create_cleaned_metadata.ipynb                          metadata -> cleaned_metadata
+│   │   ├── generate_augmented_data.ipynb                          rotate and such
 │   └── train
-│       ├── CNN.py                                                 What is this?
-│       ├── CSV_processor.py                                       What is this?
-│       ├── ConfigParserWriter-GridExperiments.ipynb               What is this?
-│       ├── ConfigParserWriter-HyperParameterExperiments.ipynb     What is this?
-│       ├── ConfigParserWriter-SelectExperiments.ipynb             What is this?
-│       ├── cifar_nin.py                                           What is this?
-│       ├── configParser.py                                        What is this?
-│       ├── dataLoader.py                                          What is this?
-│       ├── resnet_cifar.py                                        What is this?
-│       └── train.py                                               What is this?
+│       ├── CNN.py                                                 Where the rubber meets the road
+│       ├── CSV_processor.py                                       Parse a experiment-wide result and metadata file
+│       ├── ConfigParserWriter-QualityExperiments.ipynb            Generate config for the quality experiments
+│       ├── configparser_all_graded_images.ipynb                   Generate config for the whole corpus experiment
+│       ├── cifar_nin.py                                           
+│       ├── configParser.py                                        Parse an individual experiment config
+│       ├── dataLoader.py                                          Train/test manager
+│       ├── resnet_cifar.py                                        
+│       └── train.py                                               Run everything
 ```
 
 Install dependencies:
