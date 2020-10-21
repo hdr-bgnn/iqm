@@ -26,6 +26,13 @@ Organization:
 │       ├── dataLoader.py                                          Train/test manager
 │       ├── resnet_cifar.py                                        
 │       └── train.py                                               Run everything
+├── metadata
+│   ├── HDR-IMG_2020.01.27.txt                                     All INHS teleost taxa
+│   ├── hdrwebform_20200728.csv                                    Manually curated quality metadata
+│   ├── high_qual_metadata.tsv                                     Taxonomically balanced high quality subset
+│   ├── low_qual_metadata.tsv                                      Taxonomically balanced low quality subset
+│   └── orig_cleaned_metadata.tsv                                  Fish with at least 10 individuals
+
 ```
 
 Install dependencies:
