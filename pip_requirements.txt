@@ -47,7 +47,7 @@ myhelpers @ git+ssh://git@github.com/leipzig/myhelpers.git@59c3889a7e731bbd5f9dc
 nbconvert==5.6.1
 nbformat==5.0.7
 nltk==3.5
-notebook==6.0.3
+notebook==6.1.5
 numpy==1.18.5
 packaging==20.4
 palettable==3.3.0
