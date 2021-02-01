@@ -50,7 +50,7 @@ conda install conda_requirements.yaml
 
 Install myhelpers:
 ```
-pip install git+ssh://git@github.com/elhamod/myhelpers.git
+pip install git+ssh://git@github.com/hdr-bgnn/myhelpers.git
 ```
 
 Setup paths and parameters:
