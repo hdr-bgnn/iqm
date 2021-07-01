@@ -1,4 +1,4 @@
-Source code for "Biodiversity Image Quality Metadata Augments Convolutional Neural Network Classification of Fish Species" presented at [MTSR2020](http://www.mtsr-conf.org/docs/Accepted_Papers_MTSR2020.pdf?v=17n1120b). [Manuscript](https://link.springer.com/chapter/10.1007/978-3-030-71903-6_1).
+Source code for "Biodiversity Image Quality Metadata Augments Convolutional Neural Network Classification of Fish Species" ([Manuscript](https://link.springer.com/chapter/10.1007/978-3-030-71903-6_1)) presented at [MTSR2020](http://www.mtsr-conf.org/docs/Accepted_Papers_MTSR2020.pdf?v=17n1120b).
 ```
 Organization:
 ├── HGNN
